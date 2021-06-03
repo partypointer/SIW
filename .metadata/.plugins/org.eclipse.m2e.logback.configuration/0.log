@@ -81,3 +81,103 @@
 2021-06-03 18:52:55,293 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2021-06-03 18:52:55,296 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-06-03 18:52:55,297 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:31:17,516 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:17,517 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:31:17,520 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:31:17,522 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:17,522 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:31:25,211 [Worker-16: Launching Executing clean in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:31:25,211 [Worker-16: Launching Executing clean in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2021-06-03 19:31:27,256 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:27,257 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:31:27,260 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:31:27,269 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:27,270 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:31:27,270 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:31:27,270 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:31:27,273 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:38,929 [Worker-21: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-06-03 19:31:39,502 [Worker-21: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: it.uniroma3.siw:progetto1_museo:0.0.1-SNAPSHOT @ D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\pom.xml.
+2021-06-03 19:31:40,901 [Worker-21: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /progetto1_museo/src/main/java
+2021-06-03 19:31:40,902 [Worker-21: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /progetto1_museo/src/main/resources
+2021-06-03 19:31:40,902 [Worker-21: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /progetto1_museo/src/main/resources
+2021-06-03 19:31:40,903 [Worker-21: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /progetto1_museo/src/test/java
+2021-06-03 19:31:41,964 [Worker-21: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for progetto1_museo
+2021-06-03 19:31:41,976 [Worker-21: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 3 sec
+2021-06-03 19:31:42,618 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:42,619 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:31:42,638 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:31:42,668 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:31:42,668 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:31:42,669 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:31:42,669 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:31:42,674 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:36:09,180 [Worker-32: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:36:09,181 [Worker-32: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install -Dstyle.color=always
+2021-06-03 19:37:33,045 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-06-03 19:37:55,987 [Worker-5: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:37:55,989 [Worker-5: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install -Dstyle.color=always
+2021-06-03 19:39:21,370 [Worker-2: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: it.uniroma3.siw:progetto1_museo:0.0.1-SNAPSHOT @ D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\pom.xml.
+2021-06-03 19:39:23,640 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:23,646 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:39:23,665 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:39:23,668 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:23,668 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:23,714 [Worker-2: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:39:23,714 [Worker-2: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:39:23,721 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:24,889 [Worker-1: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/projectlombok/lombok/1.16.18/lombok-1.16.18-sources.jar
+2021-06-03 19:39:25,806 [Worker-1: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/projectlombok/lombok/1.16.18/lombok-1.16.18-sources.jar
+2021-06-03 19:39:25,974 [Worker-1: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.projectlombok:lombok:1.16.18
+2021-06-03 19:39:26,200 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: it.uniroma3.siw:progetto1_museo:0.0.1-SNAPSHOT @ D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\pom.xml.
+2021-06-03 19:39:27,619 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:27,623 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:39:27,633 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:39:27,645 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:27,645 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:27,646 [Worker-3: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:39:27,646 [Worker-3: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:39:27,649 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:28,883 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:28,884 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-03 19:39:28,884 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-03 19:39:28,885 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:28,885 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:28,904 [Worker-0: Launching Executing clean in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:39:28,904 [Worker-0: Launching Executing clean in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2021-06-03 19:39:30,904 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:30,905 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:39:30,908 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:39:30,919 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:30,919 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:30,920 [Worker-1: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:39:30,920 [Worker-1: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:39:30,922 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:35,695 [Worker-0: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:39:35,696 [Worker-0: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install -Dstyle.color=always
+2021-06-03 19:39:47,216 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: it.uniroma3.siw:progetto1_museo:0.0.1-SNAPSHOT @ D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\pom.xml.
+2021-06-03 19:39:49,057 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:49,060 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-03 19:39:49,060 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-03 19:39:49,062 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:49,063 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:49,063 [Worker-4: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:39:49,063 [Worker-4: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:39:49,067 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:50,447 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:50,448 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:39:50,460 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:39:50,471 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:50,471 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:51,602 [Worker-5: Launching Executing clean in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:39:51,602 [Worker-5: Launching Executing clean in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2021-06-03 19:39:53,574 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:53,575 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-03 19:39:53,580 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2021-06-03 19:39:53,594 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:39:53,594 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo\src\test\resources
+2021-06-03 19:39:53,595 [Worker-1: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of progetto1_museo
+2021-06-03 19:39:53,595 [Worker-1: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for progetto1_museo
+2021-06-03 19:39:53,600 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-03 19:40:01,502 [Worker-1: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\myPrograms\GithubRepositories\siw-public-repo\SIW\progetto1_museo
+2021-06-03 19:40:01,502 [Worker-1: Launching Executing install in D__myPrograms_GithubRepositories_siw-public-repo_SIW_progetto1_museo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install -Dstyle.color=always
