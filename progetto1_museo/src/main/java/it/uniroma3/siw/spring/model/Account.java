@@ -107,7 +107,7 @@ public class Account {
 		return DigestUtils.sha1Hex(password);
 	}
 
-	public String dencryptPassword(String encryptedPassword){
+	public String decryptPassword(String encryptedPassword){
 		String password = encryptedPassword;
 		//...
 		return DigestUtils.;
