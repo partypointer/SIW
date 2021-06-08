@@ -7696,3 +7696,63 @@ java.lang.Exception: File not found: D:\myPrograms\GithubRepositories\siw-public
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 2 2021-06-08 14:42:07.854
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-06-08 14:42:07.854
+!MESSAGE The project description file (.project) for 'progetto1_museo' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-06-08 14:42:07.854
+!MESSAGE The project description file (.project) for 'siw-spring-demo' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-06-08 14:42:07.854
+!MESSAGE The project description file (.project) for 'siw-spring-security' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 14:43:03.631
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 14:43:03.635
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 14:43:03.638
+!MESSAGE buffering callback sts4.classpath.HPPFavXe siw-spring-demo false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 14:43:03.641
+!MESSAGE executing callback sts4.classpath.HPPFavXe 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 14:43:03.653
+!MESSAGE executing callback sts4.classpath.HPPFavXe SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:33.344
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:33.347
+!MESSAGE buffering callback sts4.classpath.HPPFavXe progetto1_museo true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:33.350
+!MESSAGE executing callback sts4.classpath.HPPFavXe 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:33.360
+!MESSAGE executing callback sts4.classpath.HPPFavXe SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:42.035
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:42.051
+!MESSAGE buffering callback sts4.classpath.HPPFavXe siw-spring-security true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:42.055
+!MESSAGE executing callback sts4.classpath.HPPFavXe 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:42.064
+!MESSAGE executing callback sts4.classpath.HPPFavXe SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:51.260
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:51.266
+!MESSAGE buffering callback sts4.classpath.HPPFavXe siw-spring-demo true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:51.271
+!MESSAGE executing callback sts4.classpath.HPPFavXe 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-08 15:09:51.288
+!MESSAGE executing callback sts4.classpath.HPPFavXe SUCCESS [done]

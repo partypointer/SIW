@@ -44,9 +44,10 @@ public class Curatore {
     @OneToMany (mappedBy = "curatore", fetch = FetchType.EAGER)
     private List<Collezione> collezioni;
 	
+    /*
     @OneToOne (mappedBy = "proprietario", cascade = {CascadeType.REMOVE})
     private Account account;
-    
+    */
     
 	public Curatore(){
 		collezioni = new ArrayList<Collezione>();
@@ -115,14 +116,6 @@ public class Curatore {
 
 	public void setCollezioni(ArrayList<Collezione> collezioni) {
 		this.collezioni = collezioni;
-	}
-
-	public Account getAccount() {
-		return account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
 	}
 
 }
