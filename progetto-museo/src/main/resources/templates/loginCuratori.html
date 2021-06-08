@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.loginCuratori})"> </head>
+	<body>
+	
+		<div th:replace="fragments/base.html :: logo" />
+	    
+	    <div class="container">
+	    	
+	    	<div class="bgorange bordered panel">
+		    	<h1 class="title" th:text="#{museum.name}">Museo degli Uffizi</h1>
+		    	
+		    	<form method="POST" name="loginForm" action="....php">
+		    		<span class="loginFormFieldName" th:text="#{login.curatori.username}" />
+		    		<input type="text" class="loginFormFieldInput" id="username" name="username" th:attr="placeholder=#{login.curatori.hint.username}"><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{login.curatori.password}" />
+					<input type="password" class="loginFormFieldInput" id="password" name="password" th:attr="placeholder=#{login.curatori.hint.password}"><br><br>
+		    	</form>
+		    	
+		    	<div class="buttonlist">
+					<a th:href="@{/loginCuratori}">
+						<button class="btn" th:text="#{login.curatori.entra}">Entra</button>
+					</a>
+				</div>
+	   		</div>
+			
+			<div th:replace="fragments/base.html :: fondo" />
+	    </div>
+	    
+	</body>
+</html>

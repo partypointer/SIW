@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.repository.ArtistaRepository"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.model.Artista"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.controller.validator.ArtistaValidator"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.repository.AccountRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.security.crypto.password.PasswordEncoder"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.service.AccountService"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.model.Account"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.model.Curatore"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+</qualifiedTypeNameHistroy>
