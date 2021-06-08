@@ -20,7 +20,7 @@ import javax.persistence.OneToOne;
 public class Curatore {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
     @Column(nullable = false)

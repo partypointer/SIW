@@ -15,7 +15,7 @@ import javax.persistence.NamedQuery;
 public class Opera {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private	Long id;
 
     @Column(nullable = false)
