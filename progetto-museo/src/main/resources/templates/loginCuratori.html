@@ -12,10 +12,10 @@
 		    	
 		    	<form method="POST" name="loginForm" action="....php">
 		    		<span class="loginFormFieldName" th:text="#{login.curatori.username}" />
-		    		<input type="text" class="loginFormFieldInput" id="username" name="username" th:attr="placeholder=#{login.curatori.hint.username}"><br><br>
+		    		<input type="text" class="loginFormFieldInput" id="username" name="username" th:attr="placeholder=#{login.curatori.hint.username}" required><br><br>
 		    		
 		    		<span class="loginFormFieldName" th:text="#{login.curatori.password}" />
-					<input type="password" class="loginFormFieldInput" id="password" name="password" th:attr="placeholder=#{login.curatori.hint.password}"><br><br>
+					<input type="password" class="loginFormFieldInput" id="password" name="password" th:attr="placeholder=#{login.curatori.hint.password}" required><br><br>
 		    	</form>
 		    	
 		    	<div class="buttonlist">

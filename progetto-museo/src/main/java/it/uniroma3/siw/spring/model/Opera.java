@@ -1,6 +1,6 @@
 package it.uniroma3.siw.spring.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +22,7 @@ public class Opera {
 	private	String titolo;
 
     @Column(nullable = false)
-	private	LocalDateTime annoRealizzazione;
+	private	LocalDate annoRealizzazione;
 
     @Column(nullable = false)
 	private	String descrizione;
@@ -56,11 +56,11 @@ public class Opera {
 		this.titolo = titolo;
 	}
 
-	public LocalDateTime getAnnoRealizzazione() {
+	public LocalDate getAnnoRealizzazione() {
 		return annoRealizzazione;
 	}
 
-	public void setAnnoRealizzazione(LocalDateTime annoRealizzazione) {
+	public void setAnnoRealizzazione(LocalDate annoRealizzazione) {
 		this.annoRealizzazione = annoRealizzazione;
 	}
 

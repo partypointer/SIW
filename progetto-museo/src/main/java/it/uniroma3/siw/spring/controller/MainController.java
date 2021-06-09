@@ -12,6 +12,12 @@ public class MainController {
 	public String index(Model model) {
 			return "index";
 	}
+
+	@RequestMapping(value = {"/error"}, method = RequestMethod.GET)
+	public String error(Model model) {
+			return "error";
+	}
+	
 	@RequestMapping(value = {"/explore", "/esplora"}, method = RequestMethod.GET)
 	public String explore(Model model) {
 			return "explore";

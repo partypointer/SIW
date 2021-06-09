@@ -18,4 +18,5 @@
     <fullyQualifiedTypeName name="it.uniroma3.siw.spring.model.Curatore"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 </qualifiedTypeNameHistroy>

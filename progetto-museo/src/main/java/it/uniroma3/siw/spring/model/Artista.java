@@ -1,6 +1,6 @@
 package it.uniroma3.siw.spring.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,12 +31,12 @@ public class Artista {
     private String cognome;
 
     @Column(nullable = false)
-    private LocalDateTime dataNascita;
+    private LocalDate dataNascita;
 
     @Column(nullable = false)
     private String luogoNascita;
 
-    private LocalDateTime dataMorte;
+    private LocalDate dataMorte;
 
     private String luogoMorte;
 
@@ -92,12 +92,12 @@ public class Artista {
 	}
 
 
-	public LocalDateTime getDataNascita() {
+	public LocalDate getDataNascita() {
 		return dataNascita;
 	}
 
 
-	public void setDataNascita(LocalDateTime dataNascita) {
+	public void setDataNascita(LocalDate dataNascita) {
 		this.dataNascita = dataNascita;
 	}
 
@@ -112,12 +112,12 @@ public class Artista {
 	}
 
 
-	public LocalDateTime getDataMorte() {
+	public LocalDate getDataMorte() {
 		return dataMorte;
 	}
 
 
-	public void setDataMorte(LocalDateTime dataMorte) {
+	public void setDataMorte(LocalDate dataMorte) {
 		this.dataMorte = dataMorte;
 	}
 

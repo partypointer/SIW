@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head th:replace="fragments/base.html :: headerfiles(title='SIW')"> </head>
+<html lang="it" xml:lang="it" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.error})"> </head>
 	<body>
-		<header th:replace="fragments/base.html :: intestazione"></header>
-	    <div class="pannelloPrincipale">
-	    	<h4 th:text="#{error.generic.title}">C'è stato un errore!</h4>
-			<a th:href="@{/index}" th:text="#{error.generic.title}">C'è stato un errore!'</a>
+	
+		<div th:replace="fragments/base.html :: logo" />
+	    
+	    <div class="container">
+	    	
+	    	<div class="bgorange bordered panel">
+		    	<a th:href="@{/index}" th:text="#{error.generic.title}">C'è stato un errore!</a>
+	   		</div>
+			
+			<div th:replace="fragments/base.html :: fondo" />
 	    </div>
-	    <footer th:replace="fragments/base.html :: fondo(home='/')"></footer>
+	    
 	</body>
 </html>
