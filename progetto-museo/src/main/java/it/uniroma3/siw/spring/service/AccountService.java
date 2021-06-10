@@ -37,4 +37,5 @@ public class AccountService {
         Account.setPassword(this.passwordEncoder.encode(Account.getPassword()));
         return this.accountRepository.save(Account);
     }
+    
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
 
-	@RequestMapping(value = {"/", "index", "home"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
 	public String index(Model model) {
 			return "index";
 	}
@@ -18,7 +18,7 @@ public class MainController {
 			return "error";
 	}
 	
-	@RequestMapping(value = {"/explore", "/esplora"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/explore"}, method = RequestMethod.GET)
 	public String explore(Model model) {
 			return "explore";
 	}

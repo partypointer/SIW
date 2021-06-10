@@ -22,7 +22,7 @@ public class Opera {
 	private	String titolo;
 
     @Column(nullable = false)
-	private	LocalDate annoRealizzazione;
+	private	Long annoRealizzazione;
 
     @Column(nullable = false)
 	private	String descrizione;
@@ -56,11 +56,11 @@ public class Opera {
 		this.titolo = titolo;
 	}
 
-	public LocalDate getAnnoRealizzazione() {
+	public Long getAnnoRealizzazione() {
 		return annoRealizzazione;
 	}
 
-	public void setAnnoRealizzazione(LocalDate annoRealizzazione) {
+	public void setAnnoRealizzazione(Long annoRealizzazione) {
 		this.annoRealizzazione = annoRealizzazione;
 	}
 

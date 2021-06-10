@@ -20,7 +20,7 @@ public class CollezioneValidator implements Validator {
 	private CollezioneService collezioneService;
 	
     private static final Logger logger = LoggerFactory.getLogger(CollezioneValidator.class);
-
+    
 	@Override
 	public void validate(Object o, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");

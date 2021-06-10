@@ -35,6 +35,10 @@
 	background-color: #edc047;
 }
 
+.bgred{
+	background-color: rgb(255, 128, 128);
+}
+
 .bordered{
 	border: 2px solid black;
 }
@@ -109,6 +113,20 @@ body{
     margin-top: 2em;
 }
 /* --- base --- */
+/* --- explore --- */
+.bgopera{
+	background-color: rgb(215, 162, 21);
+}
+
+.titoloOpera{
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.descrizioneOpera{
+	font-size: 12px;
+}
+/* --- explore --- */
 /* --- loginCuratori --- */
 .loginFormFieldName {
 	font-style: italic;

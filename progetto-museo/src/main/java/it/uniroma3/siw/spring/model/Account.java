@@ -1,6 +1,7 @@
 package it.uniroma3.siw.spring.model;
 import java.time.LocalDateTime;
 
+import javax.persistence.CascadeType;
 /*
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -44,20 +45,18 @@ import lombok.Data;
     
     @Column(nullable = false)
 	private	LocalDateTime dataCreazione;
-
-    @OneToOne
-    private Curatore proprietario;
     
+    @OneToOne(cascade = CascadeType.ALL)
+    private User user;
 
 	public Account(){
 		this.dataCreazione = LocalDateTime.now();
 		this.ruolo = this.getDefaultRuolo();
 	}
 
-	public Account(Curatore proprietario, String username, String password, String ruolo){
+	public Account(String username, String password, String ruolo){
 		this.dataCreazione = LocalDateTime.now();
 		this.setUsername(username);
-		this.setProprietario(proprietario);
 		this.setPassword(password);
 		this.setRuolo(ruolo);
 	}
@@ -102,20 +101,20 @@ import lombok.Data;
 		this.dataCreazione = dataCreazione;
 	}
 
-	public Curatore getProprietario() {
-		return proprietario;
-	}
-
-	public void setProprietario(Curatore proprietario) {
-		this.proprietario = proprietario;
-	}
-
 	public static String getDefaultRuolo() {
 		return DEFAULT_RUOLO;
 	}
 
 	public static String getAdminRuolo() {
 		return ADMIN_RUOLO;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

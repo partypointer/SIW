@@ -1,0 +1,26 @@
+s<!DOCTYPE html>
+<html lang="it" xml:lang="it" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.explore})"> </head>
+	<body>
+	
+		<div th:replace="fragments/base.html :: logo" />
+	    
+	    <div class="container">
+	    	
+	    	<div class="bgorange bordered panel">
+		    	<h1 class="title" th:text="#{explore.title}"><u>Esplora</u></h1>
+				<ul>
+					<li th:each="opera : ${opere}">
+						<a href="opera.html" 
+						   th:href="@{'/opera' + '/' + ${opera.id}}" 
+						   th:text="|${opera.titolo} ${opera.anno}|">Paolo Rossi</a>
+					</li>
+				</ul>
+				
+	   		</div>
+			
+			<div th:replace="fragments/base.html :: fondo" />
+	    </div>
+	    
+	</body>
+</html>
