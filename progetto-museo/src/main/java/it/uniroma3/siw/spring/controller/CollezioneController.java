@@ -1,5 +1,7 @@
 package it.uniroma3.siw.spring.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 //import org.slf4j.Logger;
@@ -111,7 +113,7 @@ public class CollezioneController {
     	/* Se i dati di opera non sono corretti, viene effettuato un refresh */
         return "admin/addCollezione";
     }
-    
+
 	/** Se l'Opera esiste (in quanto già nel db si considera valida) e
 	 * non appartenente già ad una collezione, allora possiamo proseguire
 	 * con la creazione della collezione ed aggiungerla ad essa!
@@ -119,6 +121,82 @@ public class CollezioneController {
     private boolean isOperaValidaPerAggiuntaInCollezione(Opera opera) {
     	if(opera != null && opera.getCollezione() == null) return true;
     	return false;
+    }
+    
+    //----------------------
+    
+    
+    @RequestMapping(value = "/admin/addToCollezione", method = RequestMethod.GET)
+    public String addToCollezione(Model model) {
+		model.addAttribute("collezione", new Collezione());
+		model.addAttribute("opera", new Opera());
+    	/* Se viene premuto il bottone della sezione, viene restituita la pagina */
+    	return "admin/addToCollezione";
+    }
+    
+    @RequestMapping(value = "/admin/addToCollezione", method = RequestMethod.POST)
+    public String addToCollezione(@ModelAttribute("collezione") Collezione collezione,
+    											@ModelAttribute("opera") Opera opera,
+									@RequestParam("collezione_id") Long idCollezione,
+										@RequestParam("opera_id") Long idOpera,
+    									Model model, BindingResult bindingResult) {
+    	collezione = collezioneService.collezionePerId(idCollezione);
+    	opera = operaService.operaPerId(idOpera);
+    	
+    	if(collezione != null && isOperaValidaPerAggiuntaInCollezione(opera)) {
+    		if (!bindingResult.hasErrors()) {
+    			collezione.addToOpere(opera);
+    			operaService.updateCollezioneIdByOperaId(collezione, idOpera);
+                this.collezioneService.inserisci(collezione);
+            	/* Se l'inserimento dei dati nella form è corretto, viene mostrata la pagina di successo dell'collezionezione */
+                return "successfulOperation";
+            }
+    	}
+		/* Se l'inserimento dei dati non è corretto, viene effettuato un refresh */
+        return "admin/addToCollezione";
+    }
+    
+    //----------------------
+    
+    @RequestMapping(value = "/admin/removeCollezione", method = RequestMethod.GET)
+    public String removeCollezione(Model model) {
+    		model.addAttribute("collezione", new Collezione());
+    		/* Se viene premuto il bottone della sezione, viene restituita la pagina */
+    		return "admin/removeCollezione";
+    }
+    
+    @RequestMapping(value = "/admin/removeCollezione", method = RequestMethod.POST)
+    public String removeCollezione(@ModelAttribute("collezione") Collezione collezione,
+    											@RequestParam("collezione_id") Long id,
+    									Model model, BindingResult bindingResult) {
+    	collezione = collezioneService.collezionePerId(id);
+    	if (!bindingResult.hasErrors()) {
+    		/* Imposta a NULL tutte le collezioni delle opere (così si "liberano") */
+    		this.rimuoviCollezioneDaListaOpere(collezione);
+    		/* Cancella la collezione dal db */
+            this.collezioneService.cancella(collezione);
+        	/* Se l'inserimento dei dati nella form è corretto, viene mostrata la pagina di successo dell'collezionezione */
+            return "successfulOperation";
+        }
+    	
+		/* Se l'inserimento dei dati non è corretto, viene effettuato un refresh */
+        return "admin/removeCollezione";
+    }
+    
+    /** Imposta a NULL tutte le collezioni delle opere appartenenti ad una collezione.
+     * Restituisce il numero di opere modificate.  **/
+    private int rimuoviCollezioneDaListaOpere(Collezione collezione) {
+    	List<Opera> opereCollezioneDaCancellare = collezione.getOpere();
+		int sizeOpereCollezioneDaCancellare = opereCollezioneDaCancellare.size();
+		
+		int i=0;
+		while(i < sizeOpereCollezioneDaCancellare) {
+			Opera operaCorrente = opereCollezioneDaCancellare.get(i);
+			operaService.removeCollezioneIdByOperaId(operaCorrente.getId());
+			i++;
+		}
+		
+		return i;
     }
     
 }

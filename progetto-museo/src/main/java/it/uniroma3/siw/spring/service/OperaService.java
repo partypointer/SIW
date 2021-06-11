@@ -56,7 +56,17 @@ public class OperaService {
 	 * Collezione esistente **/
 	public boolean updateCollezioneIdByOperaId(Collezione collezione, Long idOpera) {
 		if(collezione != null && idOpera != null) {
-			int opereModificate = this.operaRepository.updateCollezioneIdByOperaId(idOpera);
+			int opereModificate = this.operaRepository.updateCollezioneIdByOperaId(collezione, idOpera);
+			if(opereModificate == 1) return true;
+		}
+		return false;
+	}
+	
+	@Transactional
+	/** Rimuove l'id della collezione dall'opera con idOpera **/
+	public boolean removeCollezioneIdByOperaId(Long idOpera) {
+		if(idOpera != null) {
+			int opereModificate = this.operaRepository.removeCollezioneIdByOperaId(idOpera);
 			if(opereModificate == 1) return true;
 		}
 		return false;

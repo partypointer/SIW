@@ -57,6 +57,7 @@
 .panel{
 	padding: 2%;
 	justify-content: space-between;
+	text-align: center;
 }
 /* --- logical inline structure --- */
 /* --- base --- */
@@ -114,7 +115,17 @@ body{
 }
 /* --- base --- */
 /* --- explore --- */
-.bgopera{
+.operePanel{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.operaPanel{
+	width: 30%;
+	margin-bottom: 2%;
+	padding: 1%;
 	background-color: rgb(215, 162, 21);
 }
 
@@ -125,6 +136,11 @@ body{
 
 .descrizioneOpera{
 	font-size: 12px;
+}
+
+.imgOpera{
+	max-height: 480px;
+	max-width: 240px;
 }
 /* --- explore --- */
 /* --- loginCuratori --- */

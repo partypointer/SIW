@@ -12,7 +12,7 @@
 		    	
 		    	<form th:action="@{/admin/addOpera}" method="POST">
                 
-		    		<span class="loginFormFieldName" th:text="#{addOpera.formTitle}" />
+		    		<span class="loginFormFieldName" th:text="#{addOpera.titolo}" />
 		    		<input type="text" class="loginFormFieldInput" th:field="${opera.titolo}" th:attr="placeholder=#{addOpera.hint.titolo}" required><br><br>
 		    		
 		    		<span class="loginFormFieldName" th:text="#{addOpera.annoRealizzazione}" />

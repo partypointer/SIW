@@ -21,11 +21,9 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
-import lombok.Data;
-
 @Entity
 @NamedQuery(name = "findAllAccounts", query = "SELECT a FROM Account a")
-@Data public class Account {
+public class Account {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

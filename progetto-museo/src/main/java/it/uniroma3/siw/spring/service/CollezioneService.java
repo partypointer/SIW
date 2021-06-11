@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Collezione;
+import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.CollezioneRepository;
 
 @Service
@@ -43,5 +44,10 @@ public class CollezioneService {
 			return true;
 		else 
 			return false;
+	}
+	
+	@Transactional
+	public void cancella(Collezione collezione) {
+		collezioneRepository.deleteById(collezione.getId());
 	}
 }

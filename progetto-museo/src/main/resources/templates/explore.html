@@ -9,13 +9,14 @@ s<!DOCTYPE html>
 	    	
 	    	<div class="bgorange bordered panel">
 		    	<h1 class="title" th:text="#{explore.title}"><u>Esplora</u></h1>
-				<ul>
-					<li th:each="opera : ${opere}">
-						<a href="opera.html" 
-						   th:href="@{'/opera' + '/' + ${opera.id}}" 
-						   th:text="|${opera.titolo} ${opera.anno}|">Paolo Rossi</a>
-					</li>
-				</ul>
+				
+				<div class="operePanel">
+					<div class="bordered operaPanel" th:each="opera: ${opere}">
+				    	<img class="bordered imgOpera" th:src="${opera.link}" alt="operaImage"/>
+				    	<h3 th:text="${opera.titolo}"></h3>
+				    	<div th:text="${opera.descrizione}"></div>
+					</div>
+				</div>
 				
 	   		</div>
 			

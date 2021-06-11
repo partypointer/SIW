@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import it.uniroma3.siw.spring.controller.validator.ArtistaValidator;
 import it.uniroma3.siw.spring.model.Artista;
+import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.service.ArtistaService;
 
 @Controller
@@ -24,6 +25,7 @@ public class ArtistaController {
     @Autowired
     private ArtistaValidator artistaValidator;
         
+    /*
     @RequestMapping(value="/admin/artista", method = RequestMethod.GET)
     public String addArtista(Model model) {
     	model.addAttribute("artista", new Artista());
@@ -52,5 +54,24 @@ public class ArtistaController {
             return "artisti";
         }
         return "artistaForm";
+    }*/
+    
+    @RequestMapping(value = "/admin/addArtista", method = RequestMethod.GET)
+    public String addArtista(Model model) {
+    		model.addAttribute("artista", new Artista());
+    		/* Se viene premuto il bottone della sezione, viene restituita la pagina */
+    		return "admin/addArtista";
+    }
+    
+    @RequestMapping(value = "/admin/addArtista", method = RequestMethod.POST)
+    public String addArtista(@ModelAttribute("artista") Artista artista, 
+    									Model model, BindingResult bindingResult) {
+    	this.artistaValidator.validate(artista, bindingResult);
+        if (!bindingResult.hasErrors()) {
+        	this.artistaService.inserisci(artista);
+            return "successfulOperation";
+        }
+		/* Se l'inserimento dei dati non è corretto, viene effettuato un refresh */
+        return "admin/addArtista";
     }
 }

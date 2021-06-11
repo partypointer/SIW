@@ -8,8 +8,13 @@
 	    <div class="container">
 	    	
 	    	<div class="bgorange bordered panel">
-		    	<a th:href="@{/login}" th:text="#{successfulOperation.message}">L'operazione è avvenuta con successo!</a>
+		    	<span th:text="#{successfulOperation.message}">L'operazione è avvenuta con successo!</span><br>
+		    	<a th:href="@{/login}">
+					<button class="btn" type="button" th:text="#{successfulOperation.backToPrivateArea}">Torna nll'Area Privata</button>
+				</a>
 	   		</div>
+	   		
+			
 			
 			<div th:replace="fragments/base.html :: fondo" />
 	    </div>

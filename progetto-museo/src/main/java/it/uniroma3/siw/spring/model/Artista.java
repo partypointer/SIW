@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @NamedQuery(name = "findAllArtisti", query = "SELECT a FROM Artista a")
 public class Artista {
@@ -30,12 +32,14 @@ public class Artista {
     @Column(nullable = false)
     private String cognome;
 
+    @JsonFormat(pattern="yyyy-MM-dd")
     @Column(nullable = false)
     private LocalDate dataNascita;
 
     @Column(nullable = false)
     private String luogoNascita;
 
+    @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate dataMorte;
 
     private String luogoMorte;
