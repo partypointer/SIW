@@ -6,7 +6,7 @@ VALUES	('Giulio', 'Carullo', '1997-10-10', 'Roma', '3926785467', 'GC1997'),
 
 
 INSERT INTO Artista (nome_artistico, nome, cognome, data_nascita, luogo_nascita, data_morte, luogo_morte, nazionalita)
-VALUES	('Sandro Botticelli', 'Alessandro', 'Di Mariano', '1445-04-17 00:00:00', 'Firenze', '1510-04-17', 'Porto Ercole', 'Italia'),
+VALUES	('Sandro Botticelli', 'Alessandro', 'Di Mariano di Vanni Filipepi', '1445-04-17 00:00:00', 'Firenze', '1510-04-17', 'Porto Ercole', 'Italia'),
 		('Caravaggio', 'Michelangelo', 'Merisi', '1571-09-29 00:00:00', 'Milano', '1610-07-18', 'Spoleto', 'Italia'),
 		(NULL, 'Antoon', 'Van Dyck', '1599-03-22 00:00:00', 'Anversa', '1641-12-09', 'Londra', 'Belgio');
 

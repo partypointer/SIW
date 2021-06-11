@@ -12,7 +12,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQuery(name = "findAllOpere", query = "SELECT o FROM Opera o")
-public class Opera {
+public class Opera{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

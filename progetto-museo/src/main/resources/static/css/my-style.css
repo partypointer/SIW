@@ -42,6 +42,10 @@
 .bordered{
 	border: 2px solid black;
 }
+
+.underlined{
+	text-decoration: underline;
+}
 /* --- colored backgrounds and borders --- */
 /* --- logical inline structure --- */
 .container{

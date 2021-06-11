@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import it.uniroma3.siw.spring.model.comparator.OperaByAuthorComparator;
 import it.uniroma3.siw.spring.service.OperaService;
 
 @Controller
@@ -29,6 +30,7 @@ public class MainController {
 	@RequestMapping(value = {"/explore"}, method = RequestMethod.GET)
 	public String explore(Model model) {
 	    	model.addAttribute("opere", operaService.tutti());
+	        model.addAttribute("byAuthor", new OperaByAuthorComparator());
 			return "explore";
 	}
 	

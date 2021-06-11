@@ -11,9 +11,14 @@ s<!DOCTYPE html>
 		    	<h1 class="title" th:text="#{explore.title}"><u>Esplora</u></h1>
 				
 				<div class="operePanel">
-					<div class="bordered operaPanel" th:each="opera: ${opere}">
+					<div class="bordered operaPanel" th:each="opera: ${#lists.sort(opere, byAuthor)}">
 				    	<img class="bordered imgOpera" th:src="${opera.link}" alt="operaImage"/>
 				    	<h3 th:text="${opera.titolo}"></h3>
+				    	
+						<h4 class="underlined" th:if="${opera.artista.nomeArtistico != null}" th:text="${opera.artista.nomeArtistico}"></h4>
+						<h4 class="underlined" th:if="${opera.artista.nomeArtistico == null}" th:text="${opera.artista.cognome + ' ' + opera.artista.nome}"></h4>
+				    	
+				    	<h4 th:text="${opera.annoRealizzazione}"></h4>
 				    	<div th:text="${opera.descrizione}"></div>
 					</div>
 				</div>
