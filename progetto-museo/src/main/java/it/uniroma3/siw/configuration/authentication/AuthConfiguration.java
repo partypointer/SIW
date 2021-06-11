@@ -1,4 +1,4 @@
-package it.uniroma3.siw.authentication;
+package it.uniroma3.siw.configuration.authentication;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -40,11 +40,11 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
                 // authorization paragraph: qui definiamo chi può accedere a cosa
                 .authorizeRequests()
                 // chiunque (autenticato o no) può accedere alle pagine index, login, register, ai css e alle immagini
-                .antMatchers(HttpMethod.GET, "/", "/index", "/login", "/register", "explore", "/css/**", "/images/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/", "/index", "/login", "/register", "/explore", "/css/**", "/images/**").permitAll()
                 // chiunque (autenticato o no) può mandare richieste POST al punto di accesso per login e register 
                 .antMatchers(HttpMethod.POST, "/login", "/register").permitAll()
                 // solo gli utenti autenticati con ruolo ADMIN possono accedere a risorse con path /admin/**
-                .antMatchers(HttpMethod.GET, "/admin/**").hasAnyAuthority(ADMIN_RUOLO)
+                .antMatchers(HttpMethod.GET, "/admin/**").hasAnyAuthority(ADMIN_RUOLO)	//, "/home/addOpera", "/home/addCollezione", "/home/addArtista", "/home/removeOpera", "/home/removeCollezione"
                 .antMatchers(HttpMethod.POST, "/admin/**").hasAnyAuthority(ADMIN_RUOLO)
                 // tutti gli utenti autenticati possono accere alle pagine rimanenti 
                 .anyRequest().authenticated()

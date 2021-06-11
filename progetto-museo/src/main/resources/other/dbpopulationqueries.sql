@@ -32,7 +32,19 @@ VALUES ('Nascita di Venere', 1485,
 		('Autoritratto con Girasole', 1597,
 		'Questo autoritratto fu eseguito da van Dyck durante il periodo di fama maggiore: era stato infatti da poco nominato Sir.',
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Anthonyvandyckselfportrait.jpeg/1280px-Anthonyvandyckselfportrait.jpeg',
-		3, 2);
+		3, 2),
+		('Test 1', 2021,
+		'Pre-generated test 1.',
+		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png',
+		3, NULL),
+		('Test 2', 2021,
+		'Pre-generated test 1.',
+		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png',
+		3, NULL),
+		('Test 3', 2021,
+		'Pre-generated test 1.',
+		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png',
+		3, NULL);
 
 SELECT * FROM CURATORE;
 SELECT * FROM OPERA;
@@ -42,6 +54,19 @@ SELECT * FROM USERS;
 SELECT * FROM ACCOUNT;
 
 
+/* VVV PER IMPOSTARE UN UTENTE COME AMMINISTRATORE */
+
+UPDATE Account
+SET Ruolo = 'ADMIN'
+WHERE Id = 1;
+
+/* VVV PER GENERARE OPERE DI TESTING VVV*/
+INSERT INTO Opera (titolo, anno_realizzazione, descrizione, link, artista_id, collezione_id)
+VALUES ('Test n', 2021,
+		'Pre-generated test n.',
+		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png',
+		3, NULL);
+
 /* VVV NO VVV*/
 
 INSERT INTO Account (username, password, ruolo, data_creazione, proprietario_id)
@@ -49,9 +74,4 @@ VALUES  ('carullo', 'carullo123', 'ADMIN', '2021-01-01 00:00:00', 1),
 		('sturdy', 'sturdy123', 'ADMIN', '2021-01-01 00:00:00', 2),
 		('art_master','master123', 'ADMIN', '2021-01-01 00:00:00', 3);
 
-/* VVV PER IMPOSTARE UN UTENTE COME AMMINISTRATORE */
-
-UPDATE Account
-SET Ruolo = 'ADMIN'
-WHERE Id = 1;
 

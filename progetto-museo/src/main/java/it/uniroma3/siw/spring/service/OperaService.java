@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import it.uniroma3.siw.spring.model.Collezione;
 import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.OperaRepository;
 
@@ -25,6 +26,11 @@ public class OperaService {
 	@Transactional
 	public List<Opera> tutti() {
 		return (List<Opera>) operaRepository.findAll();
+	}
+	
+	@Transactional
+	public void cancellaPerId(Opera opera) {
+		operaRepository.deleteById(opera.getId());
 	}
 
 	@Transactional
@@ -44,4 +50,16 @@ public class OperaService {
 		else 
 			return false;
 	}
+	
+	@Transactional
+	/** Si suppone che l'ID della collezione sia VALIDO ed appartenente ad una
+	 * Collezione esistente **/
+	public boolean updateCollezioneIdByOperaId(Collezione collezione, Long idOpera) {
+		if(collezione != null && idOpera != null) {
+			int opereModificate = this.operaRepository.updateCollezioneIdByOperaId(idOpera);
+			if(opereModificate == 1) return true;
+		}
+		return false;
+	}
+	
 }

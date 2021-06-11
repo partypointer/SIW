@@ -24,6 +24,7 @@ public class OperaController {
     @Autowired
     private OperaValidator operaValidator;
         
+    /*
     @RequestMapping(value="/admin/opera", method = RequestMethod.GET)
     public String addOpera(Model model) {
     	model.addAttribute("opera", new Opera());
@@ -52,5 +53,27 @@ public class OperaController {
             return "opere";
         }
         return "operaForm";
+    }
+    */
+    
+
+    @RequestMapping(value = "/admin/addOpera", method = RequestMethod.GET)
+    public String addOpera(Model model) {
+    		model.addAttribute("opera", new Opera());
+    		/* Se viene premuto il bottone della sezione, viene restituita la pagina */
+    		return "admin/addOpera";
+    }
+    
+    @RequestMapping(value = "/admin/addOpera", method = RequestMethod.POST)
+    public String addOpera(@ModelAttribute("opera") Opera opera, 
+    									Model model, BindingResult bindingResult) {
+    	this.operaValidator.validate(opera, bindingResult);
+        if (!bindingResult.hasErrors()) {
+        	this.operaService.inserisci(opera);
+    		/* Se l'inserimento dei dati nella form è corretto, viene mostrata la pagina di successo dell'operazione */
+            return "successfulOperation";
+        }
+		/* Se l'inserimento dei dati non è corretto, viene effettuato un refresh */
+        return "admin/addOpera";
     }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.addCollezione})"> </head>
+	<body>
+	
+		<div th:replace="fragments/base.html :: logo" />
+	    
+	    <div class="container">
+	    	
+	    	<div class="bgorange bordered panel">
+		    	<h1 class="title" th:text="#{addCollezione.formTitle}">Museo degli Uffizi</h1>
+		    	
+		    	<form th:action="@{/admin/addCollezione}" method="POST">
+                
+		    		<span class="loginFormFieldName" th:text="#{addCollezione.nome}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${collezione.nome}" th:attr="placeholder=#{addCollezione.hint.nome}" required><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCollezione.descrizione}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${collezione.descrizione}" th:attr="placeholder=#{addCollezione.hint.descrizione}"><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCollezione.curatore}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${collezione.curatore}" th:attr="placeholder=#{addCollezione.hint.curatore}" required><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCollezione.primaOpera}" />
+		    		<input type="text" class="loginFormFieldInput" name="opera_id" id="opera_id" th:attr="placeholder=#{addCollezione.hint.primaOpera}" required><br><br>
+		    		
+		    		<div class="buttonlist">
+						<button type="submit" class="btn" th:text="#{registration.confirm}">Registra</button>
+					</div>
+					
+		    	</form>
+	   		</div>
+			
+			<div th:replace="fragments/base.html :: fondo" />
+	    </div>
+	    
+	</body>
+</html>

@@ -80,7 +80,7 @@ public class AuthenticationController {
         return "registrationForm";
     }
 	
-	/* Se ha successo il login del curatore... */
+	/* Se ha successo il login dell'utente, verrà controllato il suo ruolo */
 	@RequestMapping(value = "/default", method = RequestMethod.GET)
     public String defaultAfterLogin(Model model) {
 		String returnPath = "default/home";

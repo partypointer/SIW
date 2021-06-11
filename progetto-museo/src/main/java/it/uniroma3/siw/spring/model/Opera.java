@@ -24,13 +24,12 @@ public class Opera {
     @Column(nullable = false)
 	private	Long annoRealizzazione;
 
-    @Column(nullable = false)
 	private	String descrizione;
     
     @Column(nullable = false)
 	private String link;
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     private Collezione collezione;
     
     @ManyToOne

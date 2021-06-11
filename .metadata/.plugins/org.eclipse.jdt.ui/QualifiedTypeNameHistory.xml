@@ -26,4 +26,9 @@
     <fullyQualifiedTypeName name="it.uniroma3.siw.spring.model.Artista"/>
     <fullyQualifiedTypeName name="org.springframework.security.web.util.matcher.AntPathRequestMatcher"/>
     <fullyQualifiedTypeName name="it.uniroma3.siw.spring.controller.validator.UserValidator"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.model.Opera"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.service.OperaService"/>
+    <fullyQualifiedTypeName name="it.uniroma3.siw.spring.controller.validator.OperaValidator"/>
 </qualifiedTypeNameHistroy>

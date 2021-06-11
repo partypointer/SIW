@@ -3,6 +3,7 @@ package it.uniroma3.siw.spring.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,12 +29,17 @@ public class Collezione {
     @ManyToOne
 	private Curatore curatore;
     
-    @OneToMany (mappedBy = "collezione")
+    @OneToMany (mappedBy = "collezione") //, cascade = CascadeType.ALL
     private List<Opera> opere;
     
     
     public Collezione(){
     	this.opere = new ArrayList<Opera>();
+    }
+    
+    
+    public void addToOpere(Opera opera) {
+    	this.opere.add(opera);
     }
 
 	public Long getId() {

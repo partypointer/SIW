@@ -5,7 +5,7 @@
 		<link th:href="@{/css/my-style.css}" rel="stylesheet">
 		<title th:text="${pageTitle}">Museo degli Uffizi</title>
 		<script>
-		/* Cambia il parametro dell'url in base alla lingua '*/
+			/* Cambia il parametro dell'url in base alla lingua '*/
 			function updateLanguage() {
 				var selectedLanguage = document.getElementById("language").value;
 				var currentURL = window.location.href;
@@ -24,6 +24,11 @@
 			  	/* Ricarica la pagina con il parametro corrente */
 				window.location.replace(noLanguageParameterURL + "?lang=" + selectedLanguage);
 			}
+			
+			/* Fà tornare l'utente indietro di una pagina '*/
+			function goBack() {
+				window.history.back();
+			}
 		</script>
 	</head>
 	
@@ -38,9 +43,10 @@
 			<a th:href="@{/}">
 				<button class="btn" th:text="#{footer.home}">Home</button>
 			</a>
+			<button class="btn" onClick="goBack()" th:text="#{footer.back}">Indietro</button>
 			<select class="dropdown-content" name="language" id="language" onchange="updateLanguage()">
-				<option value="EN" th:href="@{~(lang=EN)}" th:text="#{footer.changeLanguage.hint}">Cambia la lingua</a>
-				<option value="EN" th:href="@{~(lang=EN)}" th:text="#{footer.changeLanguage.english}">Inglese</a>
+				<option value="IT" th:href="@{~(lang=IT)}" th:text="#{footer.changeLanguage.hint}">Cambia la lingua</a>
+				<option value="US" th:href="@{~(lang=US)}" th:text="#{footer.changeLanguage.english}">Inglese</a>
 				<option value="IT" th:href="@{~(lang=IT)}" th:text="#{footer.changeLanguage.italian}">Italiano</a>
 			</select>
 		</div>

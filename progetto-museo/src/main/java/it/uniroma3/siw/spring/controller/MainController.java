@@ -1,5 +1,7 @@
 package it.uniroma3.siw.spring.controller;
 
+import java.util.Locale;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +19,10 @@ public class MainController {
 	public String error(Model model) {
 			return "error";
 	}
-	
+
 	@RequestMapping(value = {"/explore"}, method = RequestMethod.GET)
 	public String explore(Model model) {
 			return "explore";
 	}
+	
 }
