@@ -146,6 +146,16 @@ body{
 	max-height: 480px;
 	max-width: 240px;
 }
+
+.btnSort{
+	color: black;
+	background-color: #ffc629;
+	padding: 8px;
+	font-size: 18;
+	border-radius: 10%;
+	margin-bottom: 2%;
+	padding: 2%;
+}
 /* --- explore --- */
 /* --- loginCuratori --- */
 .loginFormFieldName {

@@ -8,7 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import it.uniroma3.siw.spring.model.comparator.OperaByAuthorComparator;
+import it.uniroma3.siw.spring.model.comparator.OperaByArtistaComparator;
+import it.uniroma3.siw.spring.model.comparator.OperaByAnnoDiRealizzazioneComparator;
 import it.uniroma3.siw.spring.service.OperaService;
 
 @Controller
@@ -30,8 +31,20 @@ public class MainController {
 	@RequestMapping(value = {"/explore"}, method = RequestMethod.GET)
 	public String explore(Model model) {
 	    	model.addAttribute("opere", operaService.tutti());
-	        model.addAttribute("byAuthor", new OperaByAuthorComparator());
 			return "explore";
 	}
 	
+	@RequestMapping(value = {"/explore/byArtista"}, method = RequestMethod.GET)
+	public String exploreByAuthor(Model model) {
+	    	model.addAttribute("opere", operaService.tutti());
+	        model.addAttribute("byArtista", new OperaByArtistaComparator());
+			return "exploreByArtista";
+	}
+	
+	@RequestMapping(value = {"/explore/byAnnoDiRealizzazione"}, method = RequestMethod.GET)
+	public String exploreByAnnoDiRealizzazione(Model model) {
+	    	model.addAttribute("opere", operaService.tutti());
+	        model.addAttribute("byAnnoDiRealizzazione", new OperaByAnnoDiRealizzazioneComparator());
+			return "exploreByAnnoDiRealizzazione";
+	}
 }

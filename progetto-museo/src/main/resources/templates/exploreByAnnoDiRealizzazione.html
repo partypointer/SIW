@@ -1,6 +1,6 @@
 s<!DOCTYPE html>
 <html lang="it" xml:lang="it" xmlns:th="http://www.thymeleaf.org">
-	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.explore})"> </head>
+	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.explore.byAnnoDiRealizzazione})"> </head>
 	<body>
 	
 		<div th:replace="fragments/base.html :: logo" />
@@ -9,16 +9,9 @@ s<!DOCTYPE html>
 	    	
 	    	<div class="bgorange bordered panel">
 		    	<h1 class="title" th:text="#{explore.title}"><u>Esplora</u></h1>
-		    	
-		    	<a th:href="@{/explore/byArtista}">
-					<button class="btnSort" th:text="#{explore.goToExploreByArtista}">Home</button>
-				</a>
-				<a th:href="@{/explore/byAnnoDiRealizzazione}">
-					<button class="btnSort" th:text="#{explore.goToExploreByAnnoDiRealizzazione}">Home</button>
-				</a>
 				
 				<div class="operePanel">
-					<div class="bordered operaPanel" th:each="opera: ${opere}">
+					<div class="bordered operaPanel" th:each="opera: ${#lists.sort(opere, byAnnoDiRealizzazione)}">
 				    	<img class="bordered imgOpera" th:src="${opera.link}" alt="operaImage"/>
 				    	<h3 th:text="${opera.titolo}"></h3>
 				    	

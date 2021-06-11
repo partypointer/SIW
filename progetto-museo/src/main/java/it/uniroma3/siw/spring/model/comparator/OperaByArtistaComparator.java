@@ -4,10 +4,10 @@ import java.util.Comparator;
 
 import it.uniroma3.siw.spring.model.Opera;
 
-public class OperaByAuthorComparator implements Comparator<Opera>{
+public class OperaByArtistaComparator implements Comparator<Opera>{
 	
 	/** Compara prima il nome artistico, poi il cognome ed infine il nome. **/
-	public int compare(Opera o1,Opera o2){
+	public int compare(Opera o1, Opera o2){
 		String nomeArtistico1 = o1.getArtista().getNomeArtistico();
 		String nomeArtistico2 = o2.getArtista().getNomeArtistico();
 		
