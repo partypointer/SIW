@@ -38,8 +38,8 @@ public class ArtistaService {
 
 	@Transactional
 	public boolean alreadyExists(Artista artista) {
-		List<Artista> prodotti = this.artistaRepository.findByNome(artista.getNome());
-		if (prodotti.size() > 0)
+		List<Artista> artisti = this.artistaRepository.findByNome(artista.getNome());
+		if (artisti.size() > 0)
 			return true;
 		else 
 			return false;

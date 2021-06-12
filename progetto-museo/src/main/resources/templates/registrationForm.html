@@ -24,6 +24,9 @@
 		    		<span class="loginFormFieldName" th:text="#{registration.password}" />
 					<input type="password" class="loginFormFieldInput" th:field="${account.password}" th:attr="placeholder=#{registration.hint.password}" required><br><br>
 		    		
+		    		<span class="loginFormFieldName" th:text="#{registration.password.confirm}" />
+					<input type="password" class="loginFormFieldInput" name="confirmPassword" id="confirmPassword" th:attr="placeholder=#{registration.hint.password.confirm}" required><br><br>
+		    		
 		    		<div class="buttonlist">
 						<button type="submit" class="btn" th:text="#{registration.confirm}">Registra</button>
 					</div>

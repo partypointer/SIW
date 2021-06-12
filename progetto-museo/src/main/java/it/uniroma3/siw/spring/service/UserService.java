@@ -5,6 +5,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import it.uniroma3.siw.spring.model.Artista;
 import it.uniroma3.siw.spring.model.User;
 import it.uniroma3.siw.spring.repository.UserRepository;
 
@@ -56,4 +57,13 @@ public class UserService {
             result.add(user);
         return result;
     }
+
+	@Transactional
+	public boolean alreadyExists(User user) {
+		List<User> users = this.userRepository.findByCognomeAndNome(user.getCognome(), user.getNome());
+		if (users.size() > 0)
+			return true;
+		else 
+			return false;
+	}
 }

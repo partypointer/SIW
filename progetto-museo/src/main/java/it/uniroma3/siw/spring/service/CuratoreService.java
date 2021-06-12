@@ -38,8 +38,8 @@ public class CuratoreService {
 
 	@Transactional
 	public boolean alreadyExists(Curatore curatore) {
-		List<Curatore> prodotti = this.curatoreRepository.findByNome(curatore.getNome());
-		if (prodotti.size() > 0)
+		List<Curatore> curatori = this.curatoreRepository.findByNome(curatore.getNome());
+		if (curatori.size() > 0)
 			return true;
 		else 
 			return false;

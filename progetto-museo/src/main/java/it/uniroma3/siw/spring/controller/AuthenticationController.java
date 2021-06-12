@@ -21,6 +21,7 @@ import it.uniroma3.siw.spring.controller.validator.UserValidator;
 import it.uniroma3.siw.spring.model.Account;
 import it.uniroma3.siw.spring.model.User;
 import it.uniroma3.siw.spring.service.AccountService;
+import it.uniroma3.siw.spring.service.UserService;
 
 @Controller
 @SessionAttributes("accountCorrente")
@@ -28,12 +29,16 @@ public class AuthenticationController {
 
 	@Autowired
 	private AccountService accountService;
+
+	@Autowired
+	private AccountValidator accountValidator;
 	
 	@Autowired
 	private UserValidator userValidator;
-	
+
 	@Autowired
-	private AccountValidator accountValidator;
+	private UserService userService;
+	
 	
 	private static final Logger logger = LoggerFactory.getLogger(CollezioneValidator.class);
     
@@ -60,24 +65,39 @@ public class AuthenticationController {
 	
     @RequestMapping(value = { "/register" }, method = RequestMethod.POST)
     public String registerUser(@ModelAttribute("user") User user,
-                 BindingResult userBindingResult,
-                 @ModelAttribute("account") Account account,
-                 BindingResult credentialsBindingResult,
+                 				BindingResult userBindingResult,
+                 	@ModelAttribute("account") Account account,
+                 			@RequestParam("confirmPassword") String confirmPassword,
+                 	BindingResult credentialsBindingResult,
                  Model model) {
 
+    	/* Controllo del campo conferma password */
+    	if(confirmPassword.compareTo(account.getPassword()) != 0) return "registrationForm";
+    	
         // validate user and credentials fields
-        this.accountValidator.validate(account, userBindingResult);
+        this.userValidator.validate(user, userBindingResult);
         this.accountValidator.validate(account, credentialsBindingResult);
 
         // if neither of them had invalid contents, store the User and the Credentials into the DB
         if(!userBindingResult.hasErrors() && ! credentialsBindingResult.hasErrors()) {
             // set the user and store the credentials;
             // this also stores the User, thanks to Cascade.ALL policy
-            account.setUser(user);
+
+        	/* Controllo esistenza di un account con lo stesso username di quello durante la registrazione */
+        	if(accountService.getAccount(account.getUsername()) != null) return "registrationForm";
+        	/* Controllo esistenza di un utente con lo stesso cognome e nome */
+        	if(userService.alreadyExists(user)) return "registrationForm";
+        	
+        	account.setUser(user);
             accountService.saveAccount(account);
             return "registrationSuccessful";
         }
         return "registrationForm";
+    }
+    
+    private boolean confirmFormPassword() {
+    	
+    	return false;
     }
 	
 	/* Se ha successo il login dell'utente, verrà controllato il suo ruolo */

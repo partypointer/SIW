@@ -44,8 +44,8 @@ public class OperaService {
 
 	@Transactional
 	public boolean alreadyExists(Opera opera) {
-		List<Opera> prodotti = this.operaRepository.findByTitolo(opera.getTitolo());
-		if (prodotti.size() > 0)
+		List<Opera> opere = this.operaRepository.findByTitolo(opera.getTitolo());
+		if (opere.size() > 0)
 			return true;
 		else 
 			return false;

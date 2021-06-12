@@ -39,8 +39,8 @@ public class CollezioneService {
 
 	@Transactional
 	public boolean alreadyExists(Collezione collezione) {
-		List<Collezione> prodotti = this.collezioneRepository.findByNome(collezione.getNome());
-		if (prodotti.size() > 0)
+		List<Collezione> collezioni = this.collezioneRepository.findByNome(collezione.getNome());
+		if (collezioni.size() > 0)
 			return true;
 		else 
 			return false;

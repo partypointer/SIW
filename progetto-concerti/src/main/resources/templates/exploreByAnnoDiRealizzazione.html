@@ -1,0 +1,32 @@
+s<!DOCTYPE html>
+<html lang="it" xml:lang="it" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(pageTitle=#{page.title.explore.byAnnoDiRealizzazione})"> </head>
+	<body>
+	
+		<div th:replace="fragments/base.html :: logo" />
+	    
+	    <div class="container">
+	    	
+	    	<div class="bgorange bordered panel">
+		    	<h1 class="title" th:text="#{explore.title}"><u>Esplora</u></h1>
+				
+				<div class="operePanel">
+					<div class="bordered operaPanel" th:each="opera: ${#lists.sort(opere, byAnnoDiRealizzazione)}">
+				    	<img class="bordered imgOpera" th:src="${opera.link}" alt="operaImage"/>
+				    	<h3 th:text="${opera.titolo}"></h3>
+				    	
+						<h4 class="underlined" th:if="${opera.artista.nomeArtistico != null}" th:text="${opera.artista.nomeArtistico}"></h4>
+						<h4 class="underlined" th:if="${opera.artista.nomeArtistico == null}" th:text="${opera.artista.cognome + ' ' + opera.artista.nome}"></h4>
+				    	
+				    	<h4 th:text="${opera.annoRealizzazione}"></h4>
+				    	<div th:text="${opera.descrizione}"></div>
+					</div>
+				</div>
+				
+	   		</div>
+			
+			<div th:replace="fragments/base.html :: fondo" />
+	    </div>
+	    
+	</body>
+</html>
